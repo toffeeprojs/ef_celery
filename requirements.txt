@@ -1,0 +1,1 @@
+celery[msgpack,zstd,librabbitmq]==5.5.3
