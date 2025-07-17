@@ -1,0 +1,12 @@
+[project]
+name = "ef-celery"
+version = "0.1.0"
+readme = "README.md"
+requires-python = "==3.13.4"
+dependencies = [
+    "celery[librabbitmq,msgpack,zstd]==5.5.3",
+    "common-lib[celery]",
+]
+
+[tool.uv.sources]
+common-lib = { path = "src/common_lib" }
