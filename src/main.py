@@ -9,12 +9,12 @@ app = Celery(
         f"@{environ['RABBITMQ_HOST']}:5672/{environ["RABBITMQ_DEFAULT_VHOST"]}"
     ),
     backend="rpc://",
-    include=["tasks"]
+    include=["src.tasks"]
 )
 
 app.conf.beat_schedule = {
     "every_30-hello": {
-        "task": "tasks.hello",
+        "task": "src.tasks.hello",
         "schedule": 30.0
     },
 }
