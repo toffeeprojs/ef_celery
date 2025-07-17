@@ -14,3 +14,5 @@ RUN apk del .build-deps
 
 COPY src src
 RUN uv sync --locked
+
+WORKDIR /code/src
